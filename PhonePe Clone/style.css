@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    padding-top: 79px;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+.main-nav {
+    width: 1250px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav li {
+    list-style-type: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-nav a:hover {
+    color: #5F259F;
+}
+
+.main-section {
+    position: relative;
+}
+
+.get-started {
+    height: 410px;
+    background-image: url("https://www.phonepe.com/webstatic/5263/static/bab93065eae063d167f5ea2699093877/70ff9/hp-banner-pg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0px 40px 250px;
+}
+
+.get-started .strike-through {
+    text-decoration: line-through;
+    font-size: 2.7rem;
+    font-weight: 550;
+    color:#C7BED8;
+} 
+
+.cost-free {
+    color: #5F1F9C;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cost-free-def {
+    font-size: 2.6rem;
+    color: #3E2A80;
+    font-weight: 600;
+}
+
+.mar {
+    margin-top: 10px;
+}
+
+.signup-gateway {
+    font-size: 1.2rem;
+    color: #371F7B;
+    margin-top: 15px;
+}
+
+.main-button {
+    border: none;
+    border-radius: 50px;  
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.free-button {
+    background-color: #5F1F9C;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.free-button:hover {
+    background-color: #7C4BD2;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    /* width: 200px;
+    margin: auto; */
+}
+
+.slider-circle {
+    width: 17px;
+    height: 17px;
+    background-color: #DDDDDD;
+    /* border: 1px solid gray; */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.slider-active {
+    background-color: #533093;
+}
+
+.slider-circle:hover {
+    background-color: #533093;
+}
+
+.split-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.split-container a {
+    text-decoration: none;
+}
+
+.box {
+    width: 560px;
+    height: 300px;
+    border: 2px solid #CBCBCB;
+    border-radius: 13px;
+    padding-left: 30px;
+    padding-top: 52px;
+}
+
+.box:hover {
+    box-shadow: 0px 0px 10px 10px #D6D6D6;
+}
+
+.left {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTgiIGhlaWdodD0iMzAxIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InByZWZpeF9fYSIgeDE9IjUwJSIgeDI9IjUwJSIgeTE9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg0NTNGMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2MTg2OSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLjUyMyAuNDI5KSI+PHRleHQgZmlsbD0iI0ZGRiIgZm9udC1mYW1pbHk9IlBvcHBpbnMtU2VtaUJvbGQsIFBvcHBpbnMiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI1MDAiIGxldHRlci1zcGFjaW5nPSItLjM2Ij48dHNwYW4geD0iMTM0LjIzMSIgeT0iODAuNzIyIj7igrk8L3RzcGFuPjwvdGV4dD48cGF0aCBmaWxsPSIjRThGQ0ZGIiBkPSJNMCAxNTAuMDM1QzAgNjcuMjA1IDY3LjEzNS4wNSAxNDkuOTY1LjAyOUwyNTcuNDc3IDB2Mjk5LjkzbC0xMDcuNTEyLjAzQzY3LjE2NSAyOTkuOTgyLjAyMiAyMzIuODc2IDAgMTUwLjA3NXYtLjA0eiIvPjxwYXRoIGZpbGw9InVybCgjcHJlZml4X19hKSIgZD0iTTk1LjIzNSAxNTcuNjMyYzE1LjgxNC03LjYgMjkuMjc4LTE5LjU5NCAzNy43OC0zNS4wOCAxMC4zMzUtMTguODI2IDkuMTctMzguNDMyIDkuMTctNTkuMzQ1VjMyLjAzQzkxLjcgMjguMDUyIDcwLjcyNiAwIDcwLjcyNiAwUzQ5Ljc0OSAyOC4wNTItLjczNiAzMi4wM3YzMS4xNzdjMCAyMC45MTMtMS4xNiA0MC41MTkgOS4xNzYgNTkuMzQ1IDguNDk3IDE1LjQ4NiAyMS45NjYgMjcuNDggMzcuNzc0IDM1LjA4IDcuODI4IDMuNzYgMTYuMDM1IDYuNDc3IDI0LjQ5NSA4LjM2OCA4LjQ2LTEuODkgMTYuNjk4LTQuNjA3IDI0LjUyNi04LjM2OHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLjI1MiA2Mi41NzEpIi8+PHBhdGggZmlsbD0iIzM2MTg2OSIgZD0iTTE1MS40NzcgMjI4LjU3MWM4LjM5OS0xLjg5IDE2LjU3OC00LjYwNyAyNC4zNS04LjM2NyAxNS42OTgtNy42IDI5LjA2NS0xOS41OTUgMzcuNTA2LTM1LjA4IDEwLjI2LTE4LjgyNyA5LjEwNS0zOC40MzIgOS4xMDUtNTkuMzQ2Vjk0LjYwMWMtNTAuMTIxLTMuOTc3LTcwLjk0NS0zMi4wMy03MC45NDUtMzIuMDNsLS4wMTYgMTY2eiIvPjxjaXJjbGUgY3g9IjE1MS40NzciIGN5PSIxNTIuNzUxIiByPSIxOS41MjkiIGZpbGw9IiNGREFENzgiLz48L2c+PC9zdmc+");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 25px;
+}
+
+.right {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjg1IiBoZWlnaHQ9IjMwMSI+PGRlZnM+PHBhdGggaWQ9InByZWZpeF9fYSIgZD0iTTAgMGgyMDF2OUgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNGRkVGRjQiIGQ9Ik0uMzM2IDE1MC41YzAtODIuODQzIDY3LjE1Ny0xNTAgMTUwLTE1MEgyODV2MzAwSDE1MC4zMzZjLTgyLjg0MyAwLTE1MC02Ny4xNTctMTUwLTE1MHoiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NCAyMDUpIj48bWFzayBpZD0icHJlZml4X19iIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNwcmVmaXhfX2EiLz48L21hc2s+PHBhdGggZmlsbD0iI0RFQkRDNyIgZD0iTTIwMSA0LjVDMjAxIDYuOTg1IDE1Ni4wMDUgOSAxMDAuNSA5UzAgNi45ODUgMCA0LjUgNDQuOTk1IDAgMTAwLjUgMCAyMDEgMi4wMTUgMjAxIDQuNSIgbWFzaz0idXJsKCNwcmVmaXhfX2IpIi8+PC9nPjxwYXRoIGZpbGw9IiNGRjc1NzIiIGQ9Ik02MS4wMDYgMjA5aDEyMS45ODhhMS45OTggMS45OTggMCAwIDAgMi4wMDYtMS45OVYxODhINTl2MTkuMDFjMCAxLjA5OS44OTggMS45OSAyLjAwNiAxLjk5TTExNSAxODhoMTMxdi04NEgxMTkuNTRhNC41MzkgNC41MzkgMCAwIDAtNC41NCA0LjUzOFYxODh6Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZD0iTTEyNCAxODdoMTEzdi03NEgxMjR6Ii8+PHBhdGggZmlsbD0iI0RCNUU1RSIgZD0iTTE4NCAyMDloNTcuOTYyYzIuMjMgMCA0LjAzOC0xLjc5MiA0LjAzOC00LjAwNFYxODhoLTYydjIxeiIvPjxwYXRoIGZpbGw9IiNEQjVFNUUiIGQ9Ik0yNDQgMTkwaDYuNDljMi40OSAwIDQuNTEtMS45MSA0LjUxLTQuMjY3di03Ny40NjZjMC0yLjM1Ny0yLjAyLTQuMjY3LTQuNTEtNC4yNjdIMjQ0djg2eiIvPjxwYXRoIHN0cm9rZT0iI0ZGNzU3MiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI4IiBkPSJNMjAwIDEwMVY4OGgtMzl2MTMiLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBkPSJNMTU2IDE3OWgzNHYtN2gtMzR6Ii8+PHBhdGggZmlsbD0iIzc5MkM1NiIgZD0iTTE2MSAxNzJ2N204LTd2N203LTd2N205LTd2NyIvPjxwYXRoIGZpbGw9IiM5RTQxNzgiIGQ9Ik0xNTUgMTg3aDM0di03aC0zNHoiLz48cGF0aCBmaWxsPSIjNzkyQzU2IiBkPSJNMTYxIDE4MHY3bTgtN3Y3bTctN3Y3bTktN3Y3Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZD0iTTE1NiAxODBoMzR2LTFoLTM0em0tNDEgMGgzNHYtN2gtMzR6Ii8+PHBhdGggZmlsbD0iIzc5MkM1NiIgZD0iTTEyMiAxNzN2N203LTd2N203LTd2N203LTd2NyIvPjxwYXRoIGZpbGw9IiM5RTQxNzgiIGQ9Ik0xMTUgMTcyaDM0di03aC0zNHptOC03djdtNy03djdtNy03djdtNy03djdtLTI5IDE1aDM0di03aC0zNHoiLz48cGF0aCBmaWxsPSIjNzkyQzU2IiBkPSJNMTIyIDE4MHY3bTctN3Y3bTctN3Y3bTctN3Y3Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZD0iTTExNSAxNzNoMzR2LTFoLTM0em0wIDhoMzR2LTFoLTM0eiIvPjxwYXRoIGZpbGw9IiNGQUI0NkQiIGQ9Ik0xMTMgMTgwaDM0di03aC0zNHptODEtM2gzNHYtN2gtMzR6Ii8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xMTkgMTczdjdtODItMTB2N20tNzUtNHY3bTgyLTEwdjdtLTc0LTR2N204MS0xMHY3bS03NC00djdtODEtMTB2NyIvPjxwYXRoIGZpbGw9IiNGQUI0NkQiIGQ9Ik0xMTMgMTcyaDM0di03aC0zNHptODEtMmgzNHYtN2gtMzR6Ii8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xMjAgMTY1djdtODItOXY3bS03NS01djdtODEtOXY3bS03My01djdtODEtOXY3bS03NC01djdtODEtOXY3Ii8+PHBhdGggZmlsbD0iI0ZBQjQ2RCIgZD0iTTExMyAxODdoMzR2LTdoLTM0em04MS0yaDM0di03aC0zNHoiLz48cGF0aCBzdHJva2U9IiNERTgxMzEiIHN0cm9rZS13aWR0aD0iLjkwOCIgZD0iTTExOSAxODB2N204Mi05djdtLTc1LTV2N204Mi05djdtLTc0LTV2N204MS05djdtLTc0LTV2N204MS05djciLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBkPSJNMTEzIDE3M2gzNHYtMWgtMzR6bTgxLTNoMzR2LTFoLTM0em0tODEgMTFoMzR2LTFoLTM0em04MS0zaDM0di0xaC0zNHoiLz48cGF0aCBmaWxsPSIjRkFCNDZEIiBkPSJNMTUzIDE3OWgzNHYtN2gtMzR6Ii8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xNTkgMTcydjdtNy03djdtNy03djdtNy03djciLz48cGF0aCBmaWxsPSIjRkFCNDZEIiBkPSJNMTUyIDE4N2gzNHYtN2gtMzR6Ii8+PHBhdGggc3Ryb2tlPSIjREU4MTMxIiBzdHJva2Utd2lkdGg9Ii45MDgiIGQ9Ik0xNTkgMTgwdjdtNy03djdtNy03djdtNy03djciLz48cGF0aCBmaWxsPSIjOUU0MTc4IiBkPSJNMTUzIDE4MGgzNHYtMWgtMzR6Ii8+PHBhdGggZmlsbD0iI0ZBQjQ2RCIgZD0iTTE1MyAxNjRoMzR2LTdoLTM0eiIvPjxwYXRoIHN0cm9rZT0iI0RFODEzMSIgc3Ryb2tlLXdpZHRoPSIuOTA4IiBkPSJNMTU5IDE1N3Y3bTctN3Y3bTctN3Y3bTctN3Y3Ii8+PHBhdGggZmlsbD0iI0ZBQjQ2RCIgZD0iTTE1MiAxNzFoMzR2LTdoLTM0eiIvPjxwYXRoIHN0cm9rZT0iI0RFODEzMSIgc3Ryb2tlLXdpZHRoPSIuOTA4IiBkPSJNMTU5IDE2NHY3bTctN3Y3bTctN3Y3bTctN3Y3Ii8+PHBhdGggZmlsbD0iIzlFNDE3OCIgZD0iTTE1MyAxNjRoMzR2LTFoLTM0em0tOTUgMjVoMTM4di00SDU4eiIvPjxwYXRoIGZpbGw9IiM0NTIyNzciIGQ9Ik0xODkuMTQ4IDE2MS4yNTloLS4wNTVsLjA1NS0uMDIydi4wMjJ6TTE4Ny4zOTcgMTcwczEuMjAzLTUuNzA2IDEuMjkxLTcuODY1YzEuNjQ5LS4xMiA2LjMxMi0xLjQzMyA2LjMxMi0xLjQzMy0uNC0uMjAyLTUuMjEzLTEuNTctNi4xNDctMS44MzUtLjA0Mi0uNDUtLjY5LTcuNDE4LS44NzMtNy44NjcgMCAwLTEuNjM3IDYuMDMzLTEuNjc1IDcuNzM1bC4wMzMuMDAyLS4wMjUuMDE3Yy0uNzgyLjE2Ni01Ljg5MiAxLjI1LTYuMzEzIDEuNDI5IDAgMCA0LjI4NSAxLjUyNCA2LjA0MiAxLjgzLjE5OCAxLjMxMiAxLjE1MiA3LjU2MiAxLjM1NSA3Ljk4N3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTg4LjE0OCAxNjAuMjU5aC0uMDU1bC4wNTUtLjAyMnYuMDIyem0tMS43NSA4Ljc0MXMxLjIwMi01LjcwNiAxLjI5LTcuODY1YzEuNjQ5LS4xMiA2LjMxMi0xLjQzMyA2LjMxMi0xLjQzMy0uNC0uMjAyLTUuMjEzLTEuNTctNi4xNDctMS44MzUtLjA0Mi0uNDUtLjY5LTcuNDE4LS44NzMtNy44NjcgMCAwLTEuNjM3IDYuMDMzLTEuNjc1IDcuNzM1bC4wMzMuMDAyLS4wMjUuMDE3Yy0uNzgyLjE2Ni01Ljg5MiAxLjI1LTYuMzEzIDEuNDI5IDAgMCA0LjI4NSAxLjUyNCA2LjA0MiAxLjgzLjE5OCAxLjMxMiAxLjE1MiA3LjU2MiAxLjM1NSA3Ljk4N3oiLz48L2c+PC9zdmc+");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.split-container-heading {
+    font-size: 29px;
+    color: #361968;
+    margin-bottom: 9px;
+}
+
+.box .split-container-heading:nth-child(2) {
+    margin-bottom: 28px;
+}
+
+.split-container-para {
+    color: #333333;
+    margin-bottom: 11px;
+}
+
+.arrow {
+    font-size: 40px;
+    color: #6739B7;
+    margin-top: 25px;
+}
+
+.vid-container {
+    justify-content: space-evenly;
+    margin-left: 30px;
+}
+
+.new-heading {
+    color: #361374;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.vid-section-heading {
+    color: #323232;
+    font-weight: lighter;
+    margin-bottom: 28px;
+}
+
+.vid-section-para {
+    color: #A5A3A7;
+    font-size: 14px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 20px;
+}
+
+.left-vid-container section:last-child .vid-section-para {
+    border-bottom: none;
+}
+
+.text-image-container {
+    width: 610px;
+    margin: auto;
+    text-align: center;
+}
+
+.image-1 {
+    width: 600px;
+}
+
+.image-2 {
+    width: 200px;
+}
+
+.image-container {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.common-img {
+    width: 300px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.common-container {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.vid-btn {
+    width: 300px;
+    height: 40px;
+    color: #6739B7;
+    background-color: white;
+    border: 1px solid #6739B7;
+}
+
+.vid-btn:hover {
+    background-color: #371F7B;
+    color: white;
+}
+
+.long-para {
+    line-height: 2;
+}
+
+.hashtag {
+    color: #A281C9;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    width: 1250px;
+    height: 340px;
+    border-radius: 30px;
+    /* margin: auto; */
+    position: absolute;
+    left: 133px;
+    top: 2840px;
+    background-image: url("https://www.phonepe.com/webstatic/5263/static/trust-banner-861f26253b71e00c083fd5f6c2ea30fc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #967EDD;
+    background-blend-mode: multiply;
+}
+
+.shield-img {
+    width: 200px;
+}
+
+.banner-heading {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.banner-para {
+    color: white;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.banner-left {
+    margin-left: 80px;
+}
+
+.banner-right {
+    margin-left: 200px;
+}
+
+.cert-container {
+    margin-top: 70px;
+}
+
+.cert-img {
+    width: 100px;
+}
+
+.cert-img-1 {
+    margin-right: 20px;
+}
+
+.overlap-container {
+    background-color: #E0DBFB;
+    margin-top: 350px;
+    text-align: center;
+}
+
+.mid-text-container {
+    padding-top: 220px;
+}
+
+.mid-text-container h1 {
+    color: #361968;
+    font-size: 45px;
+}
+
+.overlap-button {
+    background-color: #07C3DE;
+    color: #ffffff;
+    width: 250px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.overlap-button img {
+    padding-left: 10px;
+} 
+
+.overlap-button:hover {
+    background-color: #10D6F2;
+}
+
+.partner-section-desk {
+    width: 1350px;
+}
+
+.left-busy-container {
+    width: 640px;
+    height: 640px;
+    background-image: url("https://www.phonepe.com/webstatic/5263/static/7f5a690b04f23ab91ccc4061249a2745/0178f/basket-desktop.png");
+    background-size: 640px;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 20px;
+}
+
+.left-busy-container img {
+    width: 600px;
+    position: absolute;
+    top: 60px;
+    right: 70px;
+}
+
+.right-busy-container {
+    margin-left: 135px;
+}
+
+.right-busy-container h1 {
+    font-size: 40px;
+    color: #361968;
+    margin-bottom: 25px;
+}
+
+.busy-container-para {
+    color: #929292;
+    margin-bottom: 40px;
+}
+
+.right-busy-container h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.right-busy-container h3 a {
+    color: #7E48CF;
+}
+
+.right-busy-container h3 {
+    margin-bottom: 10px;   
+}
+
+.right-para {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #CBCBCB;
+}
+
+.right-busy-container img {
+    float: right;
+}
+
+.right-busy-container p:last-child {
+    border-bottom: none;
+}
+
+.explore-container {
+    height: 450px;
+    background-image: url("https://www.phonepe.com/webstatic/5263/static/stats-desktop-d03f14dfb53bebd5b23b63dd8e464adb.png");
+    background-size: 1520px  450px;
+    background-repeat: no-repeat;
+}
+
+.explore-lines {
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-para {
+    color: #D8CEFC;
+    font-size: 22px;
+}
+
+.explore-para-large {
+    color: white;
+    font-size: 45px;
+}
+
+.explore-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.explore-btn-container p {
+    color: #D4CBFF;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.explore-btn {
+    width: 170px;
+    height: 40px;
+    background-color: #7962BE;
+    color: white;
+    border: 2px solid #4CDEFF;
+    margin-left: 50px;
+}
+
+.footer-container {
+    width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.footer-heading a {
+    text-decoration: none;
+}
+
+.phonepe-container img {
+    width: 150px;
+}
+
+.footer-heading {
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+.footer-heading a {
+    color: black;
+}
+
+.footer-list li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.footer-list a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #979797;
+}
+
+.image-list-item {
+    position: relative;
+}
+
+.sisa-img {
+    width: 120px;
+}
+
+.arrow-img {
+    width: 12px;
+    position: absolute;
+    top: 55px;
+}
+
+.list-btn {
+    font-size: 15px;
+    font-weight: 550;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.social {
+    width: 1250px;
+    margin: auto;
+    text-align: end;
+}
+
+.social img {
+    margin-left: 15px;
+}
+
+.copyright {
+    padding-left: 350px;
+    color: #929292;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+}
+
+.footer-heading a:hover, .footer-list a:hover {
+    color: #6739B7;
+}
